@@ -27,12 +27,7 @@ MAX_LEN = 128          # 上限，不是固定长度
 
 
 class TextDataset(Dataset):
-    """一次只给一条样本，不做 padding。
-
-    为什么不在 __getitem__ 里 padding：
-      此时只看得见这一条，不知道同一批里别人多长，
-      补到 128 会浪费算力（新闻平均只有 40 个 token）。
-    """
+    
 
     def __init__(self, csv_path: str, tokenizer, max_len: int = MAX_LEN):
         self.df = pd.read_csv(csv_path)

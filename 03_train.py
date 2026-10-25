@@ -1,7 +1,5 @@
 # 03_train.py —— 第 3 课：训练循环
 #
-# 前置：02_data.py 的 4 个 TODO 全部填完，且 `.\run 02_data.py` 能跑通
-# 运行：.\run 03_train.py
 #
 # 本机约束（RTX 5070 Laptop 8 GB）：
 #   BATCH_SIZE=8 + MAX_LEN=128 + bf16 大约占 3~4 GB，别往上加太多
