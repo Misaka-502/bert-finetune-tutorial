@@ -1,0 +1,27 @@
+# ---- 模型与数据集缓存（几百 MB ~ 几 GB，绝对不要提交）----
+.cache/
+
+# ---- 训练产物 ----
+experiments/*
+!experiments/.gitkeep
+
+# ---- 数据（由 02_make_data.py 生成）----
+data/split/*.csv
+data/raw/*
+!data/split/.gitkeep
+!data/raw/.gitkeep
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# ---- 编辑器 ----
+.vscode/
+.idea/
+.DS_Store
+
+# ---- 临时文件 ----
+*.log
+*.tmp

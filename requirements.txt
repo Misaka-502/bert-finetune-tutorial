@@ -1,0 +1,20 @@
+# 依赖清单
+#
+# ⚠️ torch 不在这里，必须单独用 cu128 源安装（见 SETUP.md 第一节）：
+#     pip install torch --index-url https://download.pytorch.org/whl/cu128
+#
+# 原因：默认 PyPI 上的 torch 是 CPU 版；而 RTX 50 系（sm_120）必须用
+# CUDA 12.8 构建，否则能装上但没法计算。
+#
+# 下面的版本组合已在本机验证通过（Python 3.11 / Windows / RTX 5070 Laptop）。
+transformers==5.20.1
+datasets==5.1.0
+evaluate==0.4.6
+accelerate==1.15.0
+scikit-learn==1.9.1
+pandas==3.0.6
+gradio==6.30.0
+numpy==2.4.6
+
+# 仅进阶 C（08_lora.py）需要
+peft==0.21.2

@@ -1,0 +1,9 @@
+# app/requirements.txt —— Spaces 构建依赖
+#
+# 三条铁律：
+#   1. 不要写 --index-url .../cu128（Space 是 CPU，写了会构建失败）
+#   2. 不要写 datasets / accelerate / jupyterlab（部署用不到，只会拖慢构建）
+#   3. 依赖越少，构建越快；免费版排队很久
+transformers
+gradio
+torch
